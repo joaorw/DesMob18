@@ -20,12 +20,7 @@ public class PaisesDb {
 
     public void inserePaises(Pais[] paises){
         SQLiteDatabase db = dbHelper.getWritableDatabase();
-
-        /*
-         * melhorar o codigo verificando a regiao que se quer inserir
-         * e as regioes existentes na tabela antes de decidir o que
-         * deletar
-         */
+        
         db.delete(PaisesContract.PaisEntry.TABLE_NAME, null, null);
 
         for(Pais pais:paises){
